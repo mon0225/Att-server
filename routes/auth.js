@@ -79,11 +79,6 @@ authRoutes.get('/loggedin', (req, res, next) => {
   res.status(403).json({ message: 'Unauthorized' });
 });
 
-authRoutes.get('/admin',  (req,res)=>{
-  const admin = req.user.role === 'ADMIN';
-  res.render("privado", {admin});
-});
-
 authRoutes.get('/private', (req, res, next) => {
   if (req.isAuthenticated()) {
     res.json({ message: 'This is a private message' });

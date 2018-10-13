@@ -10,7 +10,7 @@ const User = require("../models/User")
       if (users !== null) {
           return res.status(200).json({ users })
      }else{
-        res.status(401).json({message: "The user dongt exist"});
+        res.status(401).json({message: "The user don't exist"});
      }
     })
     .catch(err => {

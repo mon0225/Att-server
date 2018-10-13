@@ -34,9 +34,9 @@ var personalityInsights = new PersonalityInsightsV3({
             const newEmotion = new Emotion({percentil: JSON.stringify(profile.personality[0].children[2].percentile, null, 2)})
             user.emotion= user.emotion.concat(newEmotion)
             user.save()
-                .then(result => res.send(result))
+                .then(result => res.json(result))
         })
-        .catch( error => console.log(error))
+        .catch( error => res.json(error))
         
     })
   });

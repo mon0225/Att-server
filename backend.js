@@ -59,6 +59,10 @@ app.use('/watson', routes);
 
 app.use('/workers', require('./routes/checkUser'))
 
+app.use('/private', require('./routes/checkUser'))
+
+
+
 
 
 
