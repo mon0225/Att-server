@@ -34,7 +34,7 @@ app.use(cors({
 
 mongoose.Promise = Promise;
 mongoose
-  .connect('mongodb://mon0225:nihaoma0225@ds251889.mlab.com:51889/att-client', {useMongoClient: true})
+  .connect(process.env.DB || 'mongodb://mon0225:nihaoma0225@ds251889.mlab.com:51889/att-client', {useMongoClient: true})
   .then(() => {
     console.log('Connected to Mongo!')
   }).catch(err => {
