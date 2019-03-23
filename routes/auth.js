@@ -9,6 +9,7 @@ const bcryptSalt = 10;
 
 
 authRoutes.get("/login", (req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://att-client.herokuapp.com/user');
   res.render("auth/login", { "message": req.flash("error") });
 });
 
